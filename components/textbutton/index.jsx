@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { Button, withStyles } from '@material-ui/core'
 
 
@@ -13,13 +13,19 @@ const styles = theme => ({
 });
 
 class TextButton extends Component {
+  static propTypes = {
+    children: PropTypes.any.isRequired,
+    color: PropTypes.string,
+    className: PropTypes.string,
+    onClick: PropTypes.function
+  }
 
   render () {
 
-    const { children, classes } = this.props;
+    const { children, classes, onClick } = this.props;
 
     return (
-      <Button color="primary" className={classes.button}>
+      <Button color="primary" className={classes.button} onClick={() => onClick()}>
         { children }
       </Button>
     )
