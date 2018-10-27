@@ -1,5 +1,4 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import TextButton from '../containers/demo';
 
 class Index extends React.Component {
@@ -9,11 +8,16 @@ class Index extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="demo-page">
         <TextButton>Primary</TextButton>
+        <style jsx>{`
+          .demo-page {
+            text-align: center;
+          }
+        `}</style>
       </div>
     )
   }
 }
 
-export default connect()(Index)
+export default Index
