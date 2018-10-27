@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import TextButton from '../../components/textbutton';
 import buttonClicked from './action';
 
 
 const Demo = props => (
-  <React.Fragment>
+  <Fragment>
     <TextButton onClick={() => props.buttonClicked()}>Primary</TextButton>
     <p>{`You have clicked the button ${props.count} times.`}</p>
-  </React.Fragment>
+  </Fragment>
 );
 
 
