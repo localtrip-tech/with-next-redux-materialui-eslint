@@ -17,7 +17,7 @@ class TextButton extends Component {
     children: PropTypes.any.isRequired,
     color: PropTypes.string,
     className: PropTypes.string,
-    onClick: PropTypes.function
+    onClick: PropTypes.func
   }
 
   render () {
